@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cuerpo">
+
+        <div class="header">header Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis illo a voluptas, hic
+            dolorem, quo fugit modi ad ex, et enim sunt dolore similique! Odit porro fuga corporis illum atque?
+        </div>
+
+        <div class="main">
+            <div id="contenedor">
+                <section class="crud">
+                    <h1 class="crud_title">Registro de Usuarios</h1>
+
+                    <!-- Creamos un formulario para ingresar datos. Etiquetas con id para modificar en Js y Class en CSS -->
+                    <form id="formRegister" class="crud_form">
+                        <input type="number" placeholder="codigo de barras" id="codebar" class="form_input">
+                        <input type="text" placeholder="producto" id="producto" class="form_input">
+
+                        <!-- Este botón tiene una clase general "button" y agregamos modificadores como button--primary -->
+                        <button type="submit" id="submitbutton" class="button button--primary">Agregar</button>
+                    </form>
+
+
+                </section>
+
+            </div>
+        </div>
+
+
+        <div class="side">side Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, a nam, est dolor
+            earum facilis vitae temporibus reprehenderit quisquam sequi aspernatur. Itaque, et veritatis harum
+            accusamus expedita incidunt quidem inventore.</div>
+
+        <div class="widget1">
+            <table class="crudtable">
+                <thead>
+                    <tr>
+                        <th class="table_header">CODEBAR</th>
+                        <th class="table_header">producto</th>
+                        <th class="table_header">Acciones</th>
+                    </tr>
+                </thead>
+
+                <!-- Creamos el cuerpo de la tabla que se agrega o elimina automaticamente -->
+                <tbody id="tablebody" class="table_body">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="widget2">
+
+            <div id="codigosrepetidos">
+                
+            </div>
+
+        </div>
+
+        <div class="footer">footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minima iste
+            quisquam suscipit recusandae. Consectetur perferendis accusantium expedita distinctio fugiat, incidunt
+            laudantium sit voluptates magnam asperiores iste nostrum, veniam neque.</div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
