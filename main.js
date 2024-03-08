@@ -22,7 +22,6 @@ form.addEventListener('submit', function (event) {
 
     const code = codebar.value;
     const prod = producto.value;
-    fbuscardup();
 
 
     if (code && prod) {
@@ -92,6 +91,8 @@ function renderTable() {
 
         // Creamos las filas para nuestro tablebody "la que aparece con la data":
         tablebody.appendChild(row);
+        fbuscardup();
+
 
     })
 }
@@ -113,8 +114,6 @@ function deleteData(index) {
 }
 
 
-renderTable();
-fbuscardup();
 
 
 function fbuscardup() {
@@ -130,6 +129,7 @@ function fbuscardup() {
         console.log(data[i].code)
         console.log(data[i].prod)
         data2.push(data[i].code)
+
     }
 
     //define duplicados2 como un arreglo vacio
@@ -142,7 +142,6 @@ function fbuscardup() {
             //guarde el duplicado
             duplicados2.push(tempArray2[i])
             console.log(duplicados2)
-            location.reload()
 
         }
     }
@@ -151,7 +150,6 @@ function fbuscardup() {
 
 
 
-location.reload()
 
 
 
