@@ -4,6 +4,8 @@ const form = document.getElementById('formRegister');
 const codebar = document.getElementById('codebar');
 const producto = document.getElementById('producto');
 
+
+
 //donde vamos a pintar los datos de Usuario//
 const tablebody = document.getElementById('tablebody');
 
@@ -29,6 +31,7 @@ form.addEventListener('submit', function (event) {
         data.push(newData);
         saveDataToLocalStorage();
         renderTable();
+        listadesp();
 
         //Función para borrar y volver a iniciar de JavaScript no se necesita crear
         form.reset();
@@ -64,8 +67,8 @@ function renderTable() {
         prodcell.textContent = item.prod;
 
         // Agregamos el texto en los botones.    
-        editButton.textContent = 'Editar';
-        deleteButton.textContent = 'Eliminar';
+        editButton.textContent = 'EDT';
+        deleteButton.textContent = 'DLT';
 
         // asignamos las clases a los botones que aparecen en la celda "acciones".
         editButton.classList.add('button', 'button--secundary');
@@ -97,6 +100,8 @@ function renderTable() {
     })
 }
 
+
+
 // Confección de las funciones de editar y eliminar
 function editData(index) {
     const item = data[index];
@@ -119,15 +124,12 @@ function deleteData(index) {
 function fbuscardup() {
     //imprime array data
     for (let i = 0; i < data.length; i++) {
-        console.log(data[i])
     }
     //data 2 tiene solo los code de el array data
     const data2 = []
     //se imprimen los objetos del array
     for (let i = 0; i < data.length; i++) {
-        console.log("----------")
-        console.log(data[i].code)
-        console.log(data[i].prod)
+        //se guardan los codigos repetidos en data2
         data2.push(data[i].code)
 
     }
@@ -141,11 +143,64 @@ function fbuscardup() {
         if (tempArray2[i + 1] === tempArray2[i]) {
             //guarde el duplicado
             duplicados2.push(tempArray2[i])
-            console.log(duplicados2)
 
         }
     }
+    if (duplicados2.length > 0) {
+        document.getElementById("codigosrepetidos").innerHTML = ""
+        document.getElementById("codigosrepetidos").innerHTML = "Existe un codigo repetido () , debe ser editado o eliminado"
+    } else {
+        document.getElementById("codigosrepetidos").innerHTML = "Sin reportes";
+
+    }
 }
+
+
+
+
+
+function listadesp() {
+    const tempArray3 = [...data].sort();
+    let data3 = [];
+    //let data4 = [];
+    for (let i = 0; i < tempArray3.length; i++) {
+
+        let lista = "<option>" + data3 + "</option><option>" + "</option>"
+
+        //data4.push(tempArray3[i].prod)
+        let selector1 = "<option>" + tempArray3[i].prod + "</option>"
+        data3.push(selector1)
+
+        //data4.push(" :) ")
+
+
+
+
+
+
+        console.log(selector1);
+
+       // console.log(data);
+        console.log(data3);
+        //console.log(data4);
+        //let lista = "<form><label><select><option>1</option>" + data4 + "<option>2</option></select></label></form>";
+        document.getElementById("forminout").innerHTML = data3;
+       // console.log(lista);
+
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -3,9 +3,8 @@
     padding: 0px;
 }
 
-/*oculto*/
-#actualizar{
-    display: none;
+#tablebody{
+    font-size: 70%;
 }
 
 body {
@@ -66,4 +65,8 @@ body {
     background-color: blue;
     padding: 20px;
     grid-column: 1 / -1;
+}
+
+.crudetable {
+    background-color: brown;
 }

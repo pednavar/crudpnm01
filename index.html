@@ -11,19 +11,19 @@
 <body>
     <div class="cuerpo">
 
-        <div class="header">header Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis illo a voluptas, hic
-            dolorem, quo fugit modi ad ex, et enim sunt dolore similique! Odit porro fuga corporis illum atque?
+        <div class="header">
+            <h1>Control de Ingreso y Salida de Bodega</h1>
         </div>
 
         <div class="main">
             <div id="contenedor">
                 <section class="crud">
-                    <h1 class="crud_title">Registro de Usuarios</h1>
+                    <h1 class="crud_title">Ingreso productos nuevos a bodega</h1>
 
                     <!-- Creamos un formulario para ingresar datos. Etiquetas con id para modificar en Js y Class en CSS -->
                     <form id="formRegister" class="crud_form">
-                        <input type="number" placeholder="codigo de barras" id="codebar" class="form_input">
-                        <input type="text" placeholder="producto" id="producto" class="form_input">
+                        <input type="number" placeholder="codigo de barras" id="codebar" class="form_input"><br>
+                        <input type="text" placeholder="producto" id="producto" class="form_input"><br>
 
                         <!-- Este botón tiene una clase general "button" y agregamos modificadores como button--primary -->
                         <button type="submit" id="submitbutton" class="button button--primary">Agregar</button>
@@ -36,9 +36,23 @@
         </div>
 
 
-        <div class="side">side Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, a nam, est dolor
-            earum facilis vitae temporibus reprehenderit quisquam sequi aspernatur. Itaque, et veritatis harum
-            accusamus expedita incidunt quidem inventore.</div>
+        <div class="side">
+            <h2>Ingreso y salida de bodega</h2>
+
+            <form class="formu">12313
+                <label>
+                    <select id="forminout" size="4">
+
+                    </select>
+                    <br>
+                    <div id="cantidad en bodega">Cantidad en Bodega:</div>
+                    <input type="number" id="cantidad" class="cantidadproducto"><br>
+                    <input type="submit" value="IN" />
+                    <input type="submit" value="OUT" />
+                </label>
+            </form>
+
+        </div>
 
         <div class="widget1">
             <table class="crudtable">
@@ -57,9 +71,10 @@
         </div>
 
         <div class="widget2">
+            <div> Panel de reporte
+                <div id="codigosrepetidos">Sin reportes
 
-            <div id="codigosrepetidos">
-                
+                </div>
             </div>
 
         </div>
