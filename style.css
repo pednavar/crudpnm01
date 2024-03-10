@@ -3,8 +3,14 @@
     padding: 0px;
 }
 
-#tablebody{
+
+td{border-color: black;}
+
+#tablebody {
+    border-collapse: collapse;
+    border-color: black;
     font-size: 70%;
+
 }
 
 body {
@@ -70,3 +76,8 @@ body {
 .crudetable {
     background-color: brown;
 }
+
+#tablebody {
+    border-collapse: collapse;
+    border-color: black;
+    font-size: 70%;}
